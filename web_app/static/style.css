@@ -1,0 +1,116 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container with two columns */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+/* Left form section */
+.form-section {
+    flex: 1; /* smaller portion */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Button styling */
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Right output section */
+.output-section {
+    flex: 2; /* takes double the space compared to form */
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-height: 400px; /* ensures it's taller */
+    overflow-y: auto;  /* scroll if content grows */
+}
+
+.output-section h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Content area styling */
+#contentArea {
+    padding: 20px;
+    background: #f9fafc;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    min-height: 300px; /* bigger story box */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Loading indicator */
+#loading {
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+/* Example spinner effect */
+#loading::after {
+    content: " ⏳";
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { content: " ⏳"; }
+    50% { content: " 🔄"; }
+    100% { content: " ⏳"; }
+}
