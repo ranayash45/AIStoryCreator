@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Story Style Selector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Left side: Form -->
+        <div class="form-section">
+            <h2>Choose a Story Style</h2>
+
+            <label for="style">Select style:</label>
+            <select id="style">
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="horror">Horror</option>
+                <option value="comedy">Comedy</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="mystery">Mystery</option>
+            </select>
+
+            <label for="extraInfo">Additional info:</label>
+            <textarea id="extraInfo" placeholder="Add more details..."></textarea>
+
+            <button id="loadBtn">Generate</button>
+        </div>
+
+        <!-- Right side: Output -->
+        <div class="output-section">
+            <h2>Generated Story</h2>
+            <div id="loading" style="display:none;">Loading...</div>
+            <div id="contentArea"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
